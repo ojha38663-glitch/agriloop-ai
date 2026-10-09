@@ -140,8 +140,6 @@ app.delete("/api/listings/:id", (req, res) => {
   res.json({ message: "Listing deleted successfully" });
 });
 
-const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`AgriLoop AI running on port ${PORT}`);
 });
