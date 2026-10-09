@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#174d36">
+  <title>AgriLoop AI — Farm Waste, New Value</title>
+  <style>
+    :root{--green:#174d36;--green2:#246a49;--lime:#d8ef9d;--cream:#f5f6ed;--ink:#20352a;--muted:#68776d;--line:#dce5d8;--white:#fff;--orange:#f1a64a;--shadow:0 16px 45px rgba(24,60,40,.08)}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 max(24px,calc((100% - 1160px)/2));background:#fff;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px;font-size:20px}.brand-mark{display:grid;place-items:center;width:40px;height:40px;background:var(--green);color:var(--lime);border-radius:13px;font-size:22px}.brand small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:700;margin-top:1px}.status{font-size:12px;color:var(--green);background:#eaf4df;padding:8px 12px;border-radius:99px;display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;background:#4d9a58;border-radius:50%}.hero{background:var(--green);color:white;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid #ffffff18;border-radius:50%;right:-85px;top:-190px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.hero-inner{max-width:1160px;margin:auto;padding:54px 24px 70px;display:grid;grid-template-columns:1.25fr .75fr;gap:38px;align-items:center;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.7px}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.03;letter-spacing:-2.4px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{color:#d3e2d6;line-height:1.7;max-width:570px;font-size:16px;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border:0;border-radius:10px;padding:12px 17px;font-weight:800;display:inline-flex;justify-content:center;align-items:center;gap:8px;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--lime);color:var(--green)}.btn-ghost{background:#ffffff12;border:1px solid #ffffff40;color:white}.hero-art{display:flex;justify-content:center;align-items:center;min-height:220px}.field-art{width:min(100%,330px);aspect-ratio:1;border-radius:42% 58% 50% 50%;background:#d8ef9d;display:grid;place-items:center;position:relative;transform:rotate(-5deg);box-shadow:inset 0 0 0 14px #ffffff30}.field-art .plant{font-size:112px;transform:rotate(5deg)}.float-chip{position:absolute;background:#fff;color:var(--green);padding:11px 14px;border-radius:13px;font-size:12px;font-weight:800;box-shadow:var(--shadow);transform:rotate(5deg)}.chip-a{top:22px;right:-12px}.chip-b{bottom:20px;left:-15px}.wrap{max-width:1160px;margin:-27px auto 0;padding:0 24px;position:relative;z-index:2}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.stat{background:white;border:1px solid var(--line);border-radius:15px;padding:21px 23px;box-shadow:var(--shadow)}.stat-label{color:var(--muted);font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}.stat-value{font-size:30px;font-weight:850;letter-spacing:-1px;margin-top:8px}.stat-value small{font-size:13px;color:var(--muted);letter-spacing:0;font-weight:600}.content{max-width:1160px;margin:42px auto 0;padding:0 24px 60px;display:grid;grid-template-columns:360px minmax(0,1fr);gap:22px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:23px;box-shadow:0 5px 24px #163e2510}.panel-heading{display:flex;align-items:flex-start;gap:12px;margin-bottom:20px}.panel-icon{width:42px;height:42px;display:grid;place-items:center;background:#edf5df;border-radius:12px;font-size:21px;flex-shrink:0}.panel h2{font-size:18px;margin:2px 0 5px;letter-spacing:-.3px}.sub{font-size:12px;color:var(--muted);line-height:1.5}.field{margin-bottom:15px}.field label{display:block;font-size:12px;font-weight:800;margin-bottom:7px}.field input,.field select,.field textarea,.searchbox input,.filter-select{width:100%;border:1px solid #d8e2d7;background:#fcfdf9;border-radius:9px;padding:11px 12px;outline:none;color:var(--ink);transition:border .15s,box-shadow .15s}.field input:focus,.field select:focus,.field textarea:focus,.searchbox input:focus{border-color:#4b8b5d;box-shadow:0 0 0 3px #4b8b5d1c}.field textarea{resize:vertical;min-height:75px}.field .hint{font-size:11px;color:var(--muted);margin-top:6px}.submit-btn{width:100%;background:var(--green);color:white;margin-top:3px}.submit-btn:disabled{opacity:.65;cursor:wait}.demo-note{margin:15px 0 0;background:#fff8e9;border:1px solid #f2e1b9;color:#7b5b21;border-radius:9px;padding:11px;font-size:11px;line-height:1.55}.list-panel{min-width:0}.list-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;margin-bottom:18px}.list-top h2{font-size:21px;margin:0 0 5px}.count-pill{white-space:nowrap;background:#edf5df;color:var(--green);padding:7px 10px;border-radius:99px;font-size:11px;font-weight:800}.toolbar{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:10px;margin-bottom:17px}.searchbox{position:relative}.searchbox span{position:absolute;left:12px;top:10px;font-size:17px}.searchbox input{padding-left:38px;background:#fcfdf9}.filter-select{padding:10px;font-size:12px}.listing-list{display:grid;gap:12px}.listing{border:1px solid var(--line);border-radius:13px;padding:16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;transition:border .15s,transform .15s}.listing:hover{border-color:#a8c6a7;transform:translateY(-1px)}.listing-type{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:850}.crop-icon{width:35px;height:35px;border-radius:10px;background:#f0f5e8;display:grid;place-items:center;font-size:19px;flex-shrink:0}.listing-meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:11px;color:var(--muted);font-size:12px}.listing-meta span{display:inline-flex;align-items:center;gap:5px}.listing-notes{font-size:12px;color:var(--muted);margin:10px 0 0;line-height:1.5;overflow-wrap:anywhere}.listing-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px}.quantity{font-size:19px;font-weight:850;white-space:nowrap}.quantity small{font-size:11px;color:var(--muted);font-weight:600}.availability{font-size:10px;font-weight:800;border-radius:99px;padding:6px 8px;background:#e9f5e7;color:#347143;white-space:nowrap}.availability.future{background:#fff2d9;color:#8c6217}.delete-btn{border:0;background:transparent;color:#9b5a4e;font-size:11px;font-weight:700;padding:4px 0}.empty{padding:35px 20px;text-align:center;border:1px dashed #cbd9c8;border-radius:12px;color:var(--muted)}.empty .empty-icon{font-size:30px}.empty h3{color:var(--ink);margin:10px 0 5px}.empty p{font-size:12px;margin:0}.toast{position:fixed;bottom:22px;right:22px;z-index:10;background:#173f2d;color:white;padding:14px 18px;border-radius:12px;box-shadow:var(--shadow);max-width:min(400px,calc(100% - 44px));font-size:13px;display:none}.toast.show{display:block;animation:fadein .2s ease}.toast.error{background:#8b342b}@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}footer{border-top:1px solid var(--line);background:#fff;padding:23px 24px;color:var(--muted);font-size:11px}.footer-inner{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.api-status{display:flex;align-items:center;gap:7px}.api-status .dot{background:#4d9a58}.api-status.offline .dot{background:#c96b51}
+    @media(max-width:850px){.hero-inner{grid-template-columns:1fr .55fr;gap:15px;padding-top:42px}.field-art{width:230px}.field-art .plant{font-size:84px}.content{grid-template-columns:1fr}.form-panel{order:1}.list-panel{order:2}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 13px}.form-grid .full{grid-column:1/-1}}
+    @media(max-width:560px){.topbar{height:63px;padding:0 17px}.brand{font-size:17px}.brand-mark{width:36px;height:36px}.status{font-size:10px;padding:7px 9px}.hero-inner{grid-template-columns:1fr;padding:38px 19px 58px}.hero h1{font-size:42px;letter-spacing:-1.8px}.hero p{font-size:14px}.hero-art{display:none}.wrap{padding:0 13px}.stats{gap:8px}.stat{padding:14px 11px;border-radius:12px}.stat-label{font-size:10px;display:block}.stat-value{font-size:23px}.stat-value small{font-size:10px}.content{padding:0 13px 42px;margin-top:29px;gap:15px}.panel{padding:17px;border-radius:14px}.form-grid{display:block}.list-top h2{font-size:19px}.toolbar{grid-template-columns:1fr}.listing{padding:12px;gap:7px}.listing-type{font-size:13px}.listing-meta{gap:8px;font-size:11px}.quantity{font-size:16px}.availability{font-size:9px}.footer-inner{display:block}.footer-inner span{display:block;margin:5px 0}}
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="brand"><div class="brand-mark">🌱</div><div>AgriLoop AI<small>FARM WASTE INTELLIGENCE</small></div></div>
+    <div class="status"><span class="dot"></span> <span id="topStatus">Local prototype</span></div>
+  </nav>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">🌾 Waste less. Grow more.</div>
+        <h1>Farm waste.<br><em>Fresh value.</em></h1>
+        <p>कृषि अवशेष को उपयोगी संसाधन से जोड़ने का एक आसान तरीका। उपलब्ध अवशेष की listing जोड़ें, खोजें और स्थानीय अवसरों को समझें।</p>
+        <div class="hero-actions"><button class="btn btn-primary" id="addListingBtn">＋ Listing जोड़ें</button><button class="btn btn-ghost" id="browseBtn">Listings देखें ↓</button></div>
+      </div>
+      <div class="hero-art"><div class="field-art"><span class="plant">🌱</span><div class="float-chip chip-a">♻️ Circular economy</div><div class="float-chip chip-b">🌾 Farm resources</div></div></div>
+    </div>
+  </section>
+  <div class="wrap">
+    <section class="stats" aria-label="Listing statistics">
+      <div class="stat"><div class="stat-label">📋 Total listings</div><div class="stat-value" id="statListings">—</div></div>
+      <div class="stat"><div class="stat-label">⚖️ Total listed quantity</div><div class="stat-value" id="statQuantity">— <small>kg</small></div></div>
+      <div class="stat"><div class="stat-label">📍 Areas covered</div><div class="stat-value" id="statLocations">—</div></div>
+    </section>
+  </div>
+  <main class="content" id="workspace">
+    <section class="panel form-panel" id="formPanel">
+      <div class="panel-heading"><div class="panel-icon">✚</div><div><h2>अवशेष की listing जोड़ें</h2><div class="sub">अपनी crop residue details भरें</div></div></div>
+      <form id="wasteForm">
+        <div class="form-grid">
+          <div class="field full"><label for="waste">अवशेष का प्रकार *</label><select id="waste" required><option value="">प्रकार चुनें</option><option>धान का पुआल</option><option>गेहूँ का भूसा</option><option>गन्ने की खोई</option><option>मक्के के डंठल</option><option>अन्य</option></select></div>
+          <div class="field"><label for="quantity">मात्रा (kg) *</label><input id="quantity" type="number" min="1" max="100000000" step="any" placeholder="जैसे 500" required></div>
+          <div class="field"><label for="availability">उपलब्धता *</label><select id="availability" required><option value="">चुनें</option><option>अभी उपलब्ध</option><option>फसल कटाई के बाद</option></select></div>
+          <div class="field full"><label for="location">गाँव या क्षेत्र *</label><input id="location" type="text" minlength="2" maxlength="120" placeholder="जैसे Naini, Prayagraj" required></div>
+          <div class="field full"><label for="notes">अतिरिक्त जानकारी (optional)</label><textarea id="notes" maxlength="300" placeholder="जैसे अनुमानित pickup date या material condition"></textarea><div class="hint">300 characters तक. निजी फोन नंबर या संवेदनशील जानकारी न डालें.</div></div>
+        </div>
+        <button class="btn submit-btn" id="submitBtn" type="submit">Listing save करें <span>→</span></button>
+      </form>
+      <div class="demo-note"><strong>Prototype notice:</strong> शुरुआती listings example/demo data हो सकती हैं। यह अभी verified buyers वाला live marketplace नहीं है।</div>
+    </section>
+    <section class="panel list-panel" id="listPanel">
+      <div class="list-top"><div><h2>उपलब्ध कृषि अवशेष</h2><div class="sub">Database में saved listings खोजें</div></div><div class="count-pill" id="visibleCount">Loading…</div></div>
+      <div class="toolbar"><div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="अवशेष या क्षेत्र से खोजें…" aria-label="Search listings"></div><select id="filterType" class="filter-select" aria-label="Filter by waste type"><option value="">सभी प्रकार</option><option>धान का पुआल</option><option>गेहूँ का भूसा</option><option>गन्ने की खोई</option><option>मक्के के डंठल</option><option>अन्य</option></select></div>
+      <div id="listings" class="listing-list"><div class="empty"><div class="empty-icon">🌿</div><h3>Listings load हो रही हैं</h3><p>कृपया एक पल इंतज़ार करें…</p></div></div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><span>© 2026 AgriLoop AI · Student startup prototype</span><span class="api-status" id="apiStatus"><span class="dot"></span><span>Backend से जुड़ रहे हैं…</span></span><span>Demo project · Not a verified trading platform</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const form = document.getElementById('wasteForm');
+    const typeInput = document.getElementById('waste');
+    const quantityInput = document.getElementById('quantity');
+    const locationInput = document.getElementById('location');
+    const availabilityInput = document.getElementById('availability');
+    const notesInput = document.getElementById('notes');
+    const searchInput = document.getElementById('search');
+    const filterType = document.getElementById('filterType');
+    const listingsContainer = document.getElementById('listings');
+    const submitBtn = document.getElementById('submitBtn');
+    const toast = document.getElementById('toast');
+    let wasteData = [];
+    let toastTimer;
+
+    async function api(path, options = {}) {
+      const response = await fetch(path, {
+        ...options,
+        headers: { 'Content-Type': 'application/json', ...(options.headers || {}) }
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'Request complete nahi hui.');
+      return result;
+    }
+    function notify(message, isError = false) {
+      toast.textContent = message;
+      toast.className = 'toast show' + (isError ? ' error' : '');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.className = 'toast', 3500);
+    }
+    function setBackendStatus(online) {
+      const el = document.getElementById('apiStatus');
+      el.classList.toggle('offline', !online);
+      el.querySelector('span:last-child').textContent = online ? 'Backend connected · SQLite database' : 'Backend disconnected · server start karein';
+      document.getElementById('topStatus').textContent = online ? 'Database connected' : 'Offline';
+    }
+    function cropEmoji(type) {
+      if (type.includes('धान')) return '🌾';
+      if (type.includes('गेहूँ')) return '🌿';
+      if (type.includes('गन्ने')) return '🎋';
+      if (type.includes('मक्के')) return '🌽';
+      return '♻️';
+    }
+    function renderListings() {
+      const query = searchInput.value.trim().toLocaleLowerCase('hi');
+      const selectedType = filterType.value;
+      const rows = wasteData.filter(item => {
+        const matchesText = `${item.waste_type} ${item.location} ${item.notes || ''}`.toLocaleLowerCase('hi').includes(query);
+        return matchesText && (!selectedType || item.waste_type === selectedType);
+      });
+      document.getElementById('visibleCount').textContent = `${rows.length} listing${rows.length === 1 ? '' : 's'}`;
+      listingsContainer.replaceChildren();
+      if (!rows.length) {
+        const empty = document.createElement('div'); empty.className = 'empty';
+        const icon = document.createElement('div'); icon.className = 'empty-icon'; icon.textContent = '🔎';
+        const title = document.createElement('h3'); title.textContent = wasteData.length ? 'Koi matching listing nahi mili' : 'Abhi koi listing nahi hai';
+        const desc = document.createElement('p'); desc.textContent = wasteData.length ? 'Search ya filter badal kar dekhein.' : 'Form se pehli listing add karein.';
+        empty.append(icon, title, desc); listingsContainer.appendChild(empty); return;
+      }
+      rows.forEach(item => {
+        const card = document.createElement('article'); card.className = 'listing';
+        const left = document.createElement('div');
+        const heading = document.createElement('div'); heading.className = 'listing-type';
+        const crop = document.createElement('span'); crop.className = 'crop-icon'; crop.textContent = cropEmoji(item.waste_type);
+        const name = document.createElement('span'); name.textContent = item.waste_type;
+        heading.append(crop, name);
+        const meta = document.createElement('div'); meta.className = 'listing-meta';
+        const location = document.createElement('span'); location.textContent = `📍 ${item.location}`;
+        const date = document.createElement('span'); date.textContent = `🕒 ${formatDate(item.created_at)}`;
+        meta.append(location, date); left.append(heading, meta);
+        if (item.notes) { const note = document.createElement('p'); note.className = 'listing-notes'; note.textContent = item.notes; left.appendChild(note); }
+        const side = document.createElement('div'); side.className = 'listing-side';
+        const quantity = document.createElement('div'); quantity.className = 'quantity';
+        quantity.textContent = `${Number(item.quantity_kg).toLocaleString('en-IN')} `;
+        const unit = document.createElement('small'); unit.textContent = 'kg'; quantity.appendChild(unit);
+        const availability = document.createElement('span'); availability.className = 'availability' + (item.availability === 'फसल कटाई के बाद' ? ' future' : ''); availability.textContent = item.availability;
+        const del = document.createElement('button'); del.className = 'delete-btn'; del.type = 'button'; del.textContent = 'Delete demo listing'; del.setAttribute('aria-label', `Delete listing ${item.id}`);
+        del.addEventListener('click', () => deleteListing(item.id));
+        side.append(quantity, availability, del); card.append(left, side); listingsContainer.appendChild(card);
+      });
+    }
+    function formatDate(value) {
+      if (!value) return 'Abhi';
+      const d = new Date(value.includes('T') ? value : value.replace(' ', 'T') + 'Z');
+      if (Number.isNaN(d.getTime())) return 'Abhi';
+      return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+    async function loadAll() {
+      try {
+        const [listResult, stats] = await Promise.all([api('/api/listings'), api('/api/stats')]);
+        wasteData = listResult.listings;
+        document.getElementById('statListings').textContent = Number(stats.listing_count).toLocaleString('en-IN');
+        document.getElementById('statQuantity').innerHTML = `${Number(stats.total_kg).toLocaleString('en-IN')} <small>kg</small>`;
+        document.getElementById('statLocations').textContent = Number(stats.locations_count).toLocaleString('en-IN');
+        renderListings(); setBackendStatus(true);
+      } catch (error) {
+        setBackendStatus(false);
+        listingsContainer.replaceChildren();
+        const empty = document.createElement('div'); empty.className = 'empty';
+        const title = document.createElement('h3'); title.textContent = 'Backend se connection nahi ho raha';
+        const desc = document.createElement('p'); desc.textContent = 'README file ke steps follow karke terminal mein npm start chalayein, phir page refresh karein.';
+        empty.append(title, desc); listingsContainer.appendChild(empty);
+        document.getElementById('visibleCount').textContent = 'Offline';
+      }
+    }
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const payload = {
+        waste_type: typeInput.value,
+        quantity_kg: Number(quantityInput.value),
+        location: locationInput.value.trim(),
+        availability: availabilityInput.value,
+        notes: notesInput.value.trim()
+      };
+      submitBtn.disabled = true; submitBtn.textContent = 'Save ho raha hai…';
+      try {
+        const result = await api('/api/listings', { method: 'POST', body: JSON.stringify(payload) });
+        form.reset(); await loadAll(); notify(result.message || 'Listing save ho gayi!');
+      } catch (error) { notify(error.message, true); }
+      finally { submitBtn.disabled = false; submitBtn.innerHTML = 'Listing save करें <span>→</span>'; }
+    });
+    async function deleteListing(id) {
+      if (!confirm('Kya aap is listing ko delete karna chahte hain? Ye demo/local prototype hai.')) return;
+      try { const result = await api(`/api/listings/${id}`, { method: 'DELETE' }); await loadAll(); notify(result.message); }
+      catch (error) { notify(error.message, true); }
+    }
+    searchInput.addEventListener('input', renderListings);
+    filterType.addEventListener('change', renderListings);
+    document.getElementById('addListingBtn').addEventListener('click', () => { document.getElementById('formPanel').scrollIntoView({ behavior: 'smooth', block: 'start' }); typeInput.focus({ preventScroll: true }); });
+    document.getElementById('browseBtn').addEventListener('click', () => document.getElementById('listPanel').scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    loadAll();
+  </script>
+</body>
+</html>
